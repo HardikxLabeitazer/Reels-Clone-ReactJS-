@@ -48,7 +48,7 @@ function Signup() {
 
       setLoader(true);
       let userCred = await
-       createUserWithEmailAndPassword(auth,email,password,name);
+       createUserWithEmailAndPassword(auth,email,password);
       console.log(userCred.user);
       setUser(userCred.user);
 

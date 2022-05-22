@@ -7,10 +7,13 @@ import Login from './components/Login';
 import PageNotFound from './components/PageNotFound';
 import Profile from './components/Profile';
 import Signup from './components/Signup';
+import { AuthContextProvider } from './context/AuthContext';
 function App() {
   return (
     <>
-    
+     <AuthContextProvider>
+
+     
       <Routes>
         <Route exact path="/feed" element={<Feed/>}/>
         <Route exact path="/login" element={<Login/>}/>
@@ -18,7 +21,7 @@ function App() {
         <Route exact path="/profile" element={<Profile/>}/>
         <Route exact path="/signup" element={<Signup/>}/>
       </Routes>
-    
+    </AuthContextProvider>
    
       
     </>
